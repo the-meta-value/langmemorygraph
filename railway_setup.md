@@ -1,4 +1,4 @@
-# Railway Database Setup (No Credit Card Required!)
+# Railway Database Setup 
 
 Railway offers free MySQL/MariaDB hosting perfect for your memory graph project.
 
