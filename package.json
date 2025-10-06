@@ -1,0 +1,14 @@
+{
+  "name": "lang-memory-graph",
+  "version": "1.0.0",
+  "description": "Lang's Memory Graph Visualization with Dynamic Data",
+  "scripts": {
+    "build": "echo 'No build needed for static site'"
+  },
+  "dependencies": {
+    "mysql2": "^3.6.0"
+  },
+  "devDependencies": {
+    "@netlify/functions": "^2.0.0"
+  }
+}

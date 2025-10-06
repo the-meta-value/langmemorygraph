@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lang's Memory Graph</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>🧠 Lang's Memory Graph</h1>
+        <div class="controls">
+            <input type="text" id="search" placeholder="Search memories, people, emotions..." />
+            <button id="reset-view">Reset View</button>
+            <div class="stats" id="stats">
+                Loading...
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-container">
+        <div class="graph-container">
+            <div id="memory-graph"></div>
+        </div>
+        
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <h3>Memory Details</h3>
+                <p>Click on any node to see details about that memory or relationship.</p>
+                
+                <div class="legend">
+                    <h4>Node Types</h4>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #4A90E2;"></div>
+                        <span>Entities (People)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #F5A623;"></div>
+                        <span>Events</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #BD10E0;"></div>
+                        <span>Emotions</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #7ED321;"></div>
+                        <span>Knowledge</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #D0021B;"></div>
+                        <span>Relationships</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #9013FE;"></div>
+                        <span>Maintenance</span>
+                    </div>
+                </div>
+                
+                <div class="trust-network" id="trust-network">
+                    <h4>Trust Network</h4>
+                    <div id="trust-list">Loading...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+        <p>Loading Lang's memories...</p>
+    </div>
+    
+    <script src="graph.js"></script>
+</body>
+</html>
